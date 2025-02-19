@@ -1,0 +1,14 @@
+<ul>
+<li><%= @restaurant.address %></li>
+<li><%= @restaurant.phone_number %></li>
+</ul>
+<ul>
+<% @restaurant.reviews.each do |review| %>
+<li><%= review.content.inspect %></li>
+<% end %>
+</ul>
+
+
+<%# NEED TO ADD REVIEWS  %>
+
+<%= link_to "Add review", new_restaurant_review_path %>
