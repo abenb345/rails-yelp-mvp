@@ -12,5 +12,6 @@
 <li><%= review.content.inspect %></li>
 <% end %>
 </ul>
-
+<%= link_to "Delete", restaurant_path(@restaurant),
+data: {turbo_method: :delete, turbo_confirm: "Deleted"} %>
 <%= link_to "Add review", new_restaurant_review_path(@restaurant) %>
